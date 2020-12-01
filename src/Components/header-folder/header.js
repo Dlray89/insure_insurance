@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
         boxSizing:'border-box'
     },
     button:{
-        color:'white',
+        
         background:'white',
         color:'black',
         '&:hover':{
@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     },
     rightpattern:{
         width:'20%',
-        zIndex:'7'
+        
     }
 }))
 
@@ -115,7 +115,7 @@ const Header = () => {
            
 
          
-            <img className={classes.rightpattern} src={rightPattern} />
+            <img className={classes.rightpattern} src={rightPattern} alt='design lines' />
             
 
         </div>
