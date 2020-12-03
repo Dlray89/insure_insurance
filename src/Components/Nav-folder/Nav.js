@@ -3,28 +3,28 @@ import {makeStyles, Button} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     mainContainer:{
-        border:'solid 2px red',
+    
         display:'flex',
         boxSizing:'border-box',
         width:'100%',
         justifyContent:'space-between'
     },
     navLogo:{
-        border:'solid 2px blue',
+     
         width:'20%',
         boxSizing:'border-box',
         margin:'0%',
         padding:'2%'
     },
     navLinks:{
-        border:'solid 2px yellow',
+        
         display:'flex',
         width:'50%',
         justifyContent:'space-evenly',
         boxSizing:'border-box',
     },
     links:{
-        border:'solid 2px blue',
+      
         width:'20%',
         textAlign:'center',
         boxSizing:'border-box',
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     button:{
-        border:'solid 2px blue',
+      
         boxSizing:'border-box',
         margin:'2%',
         width:'20%',

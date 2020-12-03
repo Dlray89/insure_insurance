@@ -6,7 +6,7 @@ import LeftPattern from '../../images/leftPattern.svg'
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        border: 'solid 2px yellow',
+       
         background: 'hsl(256, 26%, 20%)',
         color: 'white',
         display:'flex',
@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
 
     },
     firstBox:{
-        border: 'solid 2px blue',
+      
         width:'60%',
         boxSizing:'border-box',
        
     },
     fbText1:{
-        border: 'solid 2px red',
+        
         width:'70%',
         margin:'5% auto',
         textAlign:'start',
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         
     },
     fbText2:{
-        border: 'solid 2px red',
+        
         width:'70%',
         margin:'2% auto',
         fontSize:'50px',
@@ -38,14 +38,14 @@ const useStyles = makeStyles((theme) => ({
         boxSizing:'border-box'
     },
     fbText3:{
-        border: 'solid 2px red',
+        
         width:'70%',
         margin:'2% auto',
         boxSizing:'border-box',
         textAlign:'start',
     },
     fbButton:{
-        border:'solid 2px red',
+      
         width:'70%',
         margin:'0 auto',
         textAlign:'start',
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     secondBox:{
-        border: 'solid 2px green',
+      
         color:'white',
         boxSizing:'border-box',
         width:'30%',
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
         zIndex:1
     },
     leftPatternBox:{
-        border:'solid 2px blue',
+      
         position:'absolute',
         left:'0%',
         top:'60%'
