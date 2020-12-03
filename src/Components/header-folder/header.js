@@ -98,7 +98,7 @@ const Header = () => {
     return (
         <div className={classes.mainContainer}>
             <div className={classes.leftPatternBox}>
-                <img src={LeftPattern} />
+                <img src={LeftPattern} alt='left pattern' />
             </div>
             <div className={classes.firstBox}>
                 <div className={classes.fbText1}>
