@@ -52,7 +52,7 @@ const usestyles = makeStyles((theme) => ({
     },
     linksContainer:{
       
-        boxSizing:'border-box',
+        
         display:'flex',
         justifyContent:'space-evenly',
         boxSizing:'border-box'
