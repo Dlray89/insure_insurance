@@ -91,12 +91,13 @@ const useStyle = makeStyles((theme) => ({
     button:{
        
         marginTop:'44%',
-        background:'white',
-        color:'hsl(256, 26%, 20%)',
+        background:'hsl(256, 26%, 20%)',
+        color:'white',
         width:'75%',
+        border:'solid 2px white',
         '&:hover':{
-            background:'hsl(256, 26%, 20%)',
-            color:'white',
+            background:'white',
+            color:'hsl(256, 26%, 20%)',
             border:'solid 1px white'
         }
     }

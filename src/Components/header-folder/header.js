@@ -53,11 +53,12 @@ const useStyles = makeStyles((theme) => ({
     },
     button:{
         
-        background:'white',
-        color:'black',
+        background:'hsl(256, 26%, 20%)',
+        color:'white',
+        border:'solid 2px white',
         '&:hover':{
-            background:'black',
-            color:'white'
+            background:'white',
+            color:'hsl(256, 26%, 20%)'
         },
         
     },

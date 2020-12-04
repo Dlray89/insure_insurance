@@ -41,10 +41,13 @@ const useStyles = makeStyles((theme) => ({
         boxSizing:'border-box',
         margin:'2%',
         width:'20%',
-        background:'hsl(256, 26%, 20%)',
-        color:'white',
+        background:'white',
+        color:'hsl(256, 26%, 20%)',
+        border:' solid 2px hsl(256, 26%, 20%)',
         '&:hover':{
-            color:'black'
+            background:'hsl(256, 26%, 20%)',
+            color:'white',
+            border:'solid 2px white'
         }
     }
 }))
