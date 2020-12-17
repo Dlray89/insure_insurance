@@ -1,19 +1,32 @@
 import React from 'react'
+import { ThemeProvider } from '@material-ui/styles'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import theme from './Components/UI/theme'
 import Navbar from './Components/Nav-folder/Nav'
 import Header from './Components/header-folder/header'
-import Body from './Components/Body Content/body'
+import LandingPage from './Components/Body Content/LandingPage'
 import Footer from './Components/Footer/footer'
 import './App.css';
 
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
+      
+      <BrowserRouter>
       <Navbar  />
-      <Header  />
-      <Body />
+      <Switch>
+        <Route exact path='/' component={LandingPage}  />
+        <Route exact path='/howitworks' component={() => <div>How it works</div>}  />
+        <Route exact path='/blogs' component={() => <div>Blogs</div>}  />
+        <Route exact path='/accounts' component={() => <div>Accounts</div>}  />
+        <Route exact path='/viewplans' component={() => <div>View Plan</div>}  />
+      </Switch>
       <Footer />
-    </div>
+      </BrowserRouter>
+      
+     
+    </ThemeProvider>
   );
 }
 

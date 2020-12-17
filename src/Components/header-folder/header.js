@@ -11,7 +11,12 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         display:'flex',
         boxSizing:'border-box',
-        width:'100%',justifyContent:'center'
+        width:'100%',justifyContent:'center',
+        [theme.breakpoints.down('xs')]:{
+            border:'solid 2px red',
+            flexDirection:'column',
+            marginTop:'30%'
+        }
         
 
     },
@@ -35,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
         margin:'2% auto',
         fontSize:'50px',
         textAlign:'start',
-        boxSizing:'border-box'
+        boxSizing:'border-box',
+        fontFamily:'DM Serif Display, serif',
     },
     fbText3:{
         
@@ -43,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
         margin:'2% auto',
         boxSizing:'border-box',
         textAlign:'start',
+        fontFamily:'DM Serif Display, serif',
     },
     fbButton:{
       
@@ -56,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
         background:'hsl(256, 26%, 20%)',
         color:'white',
         border:'solid 2px white',
+        fontFamily:'DM Serif Display, serif',
         '&:hover':{
             background:'white',
             color:'hsl(256, 26%, 20%)'
@@ -74,7 +82,14 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize:'100%',
         position:'absolute',
         left:'54%',
-        top:'24%'
+        top:'24%',
+        [theme.breakpoints.down('xs')]:{
+            border:'solid 2px yellow',
+            position:'absolute',
+            top:'20%',
+            width:'100%',
+            left:'0%'
+        }
     },
    
     rightpattern:{
