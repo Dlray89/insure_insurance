@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
   },
   LeftPattern: {
     position: "absolute",
-    top: "75%",
+    top: "95%",
   },
   leftPatternIimg: {
     width: "13em",
