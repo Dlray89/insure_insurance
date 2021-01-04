@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
   },
   headerDivider: {
     color: theme.palette.common.white,
-    marginTop: "2em",
+    marginTop: "7em",
+    color:'white'
   },
   headerTitle: {
     fontSize: "5em",
@@ -112,6 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     height: "40em",
+    marginTop:'5em',
     [theme.breakpoints.down("sm")]: {
       height: "100%",
       width:'100%'
