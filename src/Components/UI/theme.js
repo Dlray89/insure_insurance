@@ -52,7 +52,17 @@ export default createMuiTheme({
             fontFamily: 'DM Serif Display',
             fontWeight: 400,
             color: 'white'
+        },
+        subtitle1:{
+            textAlign:'left'
+        },
+        h6:{
+            textAlign:'left'
+        },
+        h3:{
+            fontFamily: "DM Serif Display",
         }
+        
     },
 
 })
