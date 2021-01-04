@@ -5,9 +5,10 @@ import {
   Button,
   Divider,
   Typography,
-  theme,
+  // theme,
   useMediaQuery,
   useTheme,
+  Hidden,
 } from "@material-ui/core";
 import HeaderPic from "../../images/header_pic.jpg";
 import bg_right_pattern from "../../images/bg-pattern-intro-right-desktop.svg";
@@ -17,6 +18,8 @@ import AffordablePrices from "../../images/affordable-prices.svg";
 import PeopleFirst from "../../images/people-first.svg";
 import Howwework from "../../images/how-we-work-desktop.svg";
 
+import mobileIntroLeft from "../../images/bg-pattern-intro-left-mobile.svg";
+
 const useStyles = makeStyles((theme) => ({
   headerContainer: {
     background: theme.palette.common.veryDarkViolet,
@@ -24,10 +27,23 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPositionX: "100%",
     zIndex: 1302,
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      flexDirection: "column-reverse",
+      backgroundImage: "url(" + mobileIntroLeft + ")",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundPositionX: "0%",
+      backgroundPositionY: "72%",
+      backgroundSize: "13em",
+    },
   },
   headerTextContainer: {
     width: "40%",
     marginRight: "38em",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   headerDivider: {
     color: theme.palette.common.white,
@@ -37,18 +53,41 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "5em",
     ...theme.typography.header,
     marginBottom: "0.25em",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2.7em",
+      textAlign: "center",
+      width: "92%",
+      margin: "0 auto",
+      marginTop: "1em",
+    },
   },
   headerSubTitle: {
     fontSize: "1em",
     color: theme.palette.common.white,
     marginBottom: "2em",
     fontFamily: "DM Serif Display",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1em",
+      width: "90%",
+      textAlign: "center",
+      margin: "0 auto",
+      marginTop: "1em",
+    },
+  },
+  headerButtonContainer: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
   },
   headerButton: {
     border: " solid 2px white",
     color: theme.palette.common.white,
     marginBottom: "5em",
     fontFamily: "DM Serif Display",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      marginTop: "2em",
+    },
     "&:hover": {
       background: theme.palette.common.white,
       color: "hsl(270, 9%, 17%)",
@@ -60,9 +99,23 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     marginTop: "3.2em",
     marginLeft: "25em",
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      margin: 0,
+      width: "100%",
+    },
+  },
+  PicBox: {
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   img: {
     height: "40em",
+    [theme.breakpoints.down("sm")]: {
+      height: "100%",
+      width:'100%'
+    },
   },
   LeftPattern: {
     position: "absolute",
@@ -75,16 +128,41 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     marginLeft: "7.2em",
     marginTop: "3em",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      margin: 0,
+      width: "100%",
+      marginTop: "2em",
+      marginBottom: "1em",
+    },
   },
 
   valueTitleCOntainer: {
     width: "30%",
     marginBottom: "4em",
-    
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  title: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      width: "100%",
+    },
+  },
+  valueIconsContainer: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+
+      width: "100%",
+    },
   },
   vaulueIcons: {
     height: "4em",
     textAlign: "left",
+    [theme.breakpoints.down("sm")]: {
+      height: "5em",
+    },
   },
   snappyProcessContainer: {
     width: "26%",
@@ -92,19 +170,46 @@ const useStyles = makeStyles((theme) => ({
   valueContainers: {
     width: "29.6%",
     marginRight: "2em",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      marginBottom: "3em",
+      width: "100%",
+    },
   },
   valueTitleContainer: {
     marginRight: "auto",
     marginBottom: "1em",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+
+      width: "100%",
+    },
   },
   valueTitle: {
     fontFamily: "DM Serif Display",
-    fontSize:'2em'
+    fontSize: "2em",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+
+      width: "100%",
+    },
   },
-  valuedetails:{
+  valuedetails: {
     fontFamily: "DM Serif Display",
     fontWeight: 0,
-    fontSize:'0.85em'
+    fontSize: "0.85em",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+
+      width: "70%",
+      margin: "0 auto",
+      fontSize: "0.85em",
+    },
+  },
+  findoutMoreMainContainer: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
   },
   findoutMoreContainer: {
     padding: "3%",
@@ -115,13 +220,37 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPositionX: "100%",
     backgroundSize: "33%",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      width: "90%",
+      backgroundRepeat: "no-repeat",
+      backgroundPositionX: "700%",
+      backgroundSize: "93%",
+      padding: "2em",
+    },
+  },
+  findoutmoreTitleContainer: {
+    width: "50%",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      width: "90%",
+      margin: 0,
+      marginBottom: "1em",
+    },
+  },
+  findoutmoreTitle: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      width: "100%",
+      fontSize: "2em",
+    },
   },
 }));
 
 const LandingPage = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const MobileMD = useMediaQuery(theme.breakpoints.down("md"));
+  const MobileSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const valuesInsure = [
     {
@@ -158,9 +287,11 @@ const LandingPage = () => {
           justify="space-around"
           className={classes.headerTextContainer}
         >
-          <Grid item className={classes.headerDivider}>
-            ________________________
-          </Grid>
+          <Hidden mdDown>
+            <Grid item className={classes.headerDivider}>
+              ________________________
+            </Grid>
+          </Hidden>
           <Grid item className={classes.headerTitle}>
             Humanize <br />
             your insurance.
@@ -172,7 +303,7 @@ const LandingPage = () => {
             you. Ensure you and your loved ones are protected.
           </Grid>
 
-          <Grid item>
+          <Grid item className={classes.headerButtonContainer}>
             <Button
               className={classes.headerButton}
               color="primary"
@@ -191,33 +322,37 @@ const LandingPage = () => {
         </Grid>
       </Grid>
 
-      <Grid className={classes.LeftPattern} item container>
-        <img
-          className={classes.leftPatternIimg}
-          alt="left pattern"
-          src={LeftPattern}
-        />
-      </Grid>
+      <Hidden mdDown>
+        <Grid className={classes.LeftPattern} item container>
+          <img
+            className={classes.leftPatternIimg}
+            alt="left pattern"
+            src={LeftPattern}
+          />
+        </Grid>
+      </Hidden>
 
       <Divider
         style={{
           background: theme.palette.common.darkViolet,
           marginTop: "30%",
-          width: "10%",
-          marginLeft: "7.2em",
+          width: MobileSM ? "50%" : "10%",
+          marginLeft: MobileSM ? '0 auto' : "7.2em",
         }}
       />
 
       <Grid container className={classes.mainValueContainer}>
         <Grid item container className={classes.valueTitleCOntainer}>
-          <Typography variant="h3">We're different</Typography>
+          <Typography className={classes.title} variant="h3">
+            We're different
+          </Typography>
         </Grid>
 
         <Grid
           className={classes.valueContainer}
           item
           container
-          direction={MobileMD ? "column" : "row"}
+          direction={MobileSM ? "column" : "row"}
           alignItems="center"
         >
           {valuesInsure.map((value) => (
@@ -230,7 +365,11 @@ const LandingPage = () => {
               className={classes.valueContainers}
               key={value.id}
             >
-              <Grid item style={{ marginRight: "auto", marginBottom: "2em" }}>
+              <Grid
+                className={classes.valueIconsContainer}
+                item
+                style={{ marginRight: "auto", marginBottom: "2em" }}
+              >
                 <img
                   className={classes.vaulueIcons}
                   src={value.icon}
@@ -259,18 +398,14 @@ const LandingPage = () => {
 
       <Grid item container className={classes.findoutMoreMainContainer}>
         <Grid
-          direction="row"
+          direction={MobileSM ? "column" : "row"}
           justify="space-between"
           alignItems="center"
           item
           container
           className={classes.findoutMoreContainer}
         >
-          <Grid
-            className={classes.findoutmoreTitleContainer}
-            item
-            style={{ width: "50%" }}
-          >
+          <Grid className={classes.findoutmoreTitleContainer} item>
             <Typography
               className={classes.findoutmoreTitle}
               style={{ color: "white", fontFamily: "DM Serif Display" }}
