@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
   headerDivider: {
     color: theme.palette.common.white,
     marginTop: "7em",
-    color:'white'
   },
   headerTitle: {
     fontSize: "5em",
