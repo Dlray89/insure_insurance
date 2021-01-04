@@ -1,6 +1,6 @@
 import React from "react";
 // import {Link} from 'react-router-dom'
-import { makeStyles, Grid } from "@material-ui/core";
+import { makeStyles, Grid, useTheme, useMediaQuery } from "@material-ui/core";
 import Logo from "../../../images/logo.svg";
 import FB from "../../../images/icon-facebook.svg";
 import Twitter from "../../../images/icon-twitter.svg";
@@ -23,8 +23,9 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '1em',
       ...theme.typography.footer,
       color:'hsl(273, 4%, 51%)',
-      [theme.breakpoints.down('md')]:{
-        textAlign: 'center'
+      [theme.breakpoints.down('sm')]:{
+        textAlign: 'center',
+        width:'100%' 
     }
       
       
@@ -41,8 +42,20 @@ const useStyles = makeStyles((theme) => ({
       margin: '0 auto',
       width: '80%'
   },
+  logoContainer:{
+    [theme.breakpoints.down('sm')]:{
+      margin: 0,
+      width:'100%',
+      textAlign:'center',
+      marginBottom:'1em'
+    }
+  },
   footerLogo:{
       marginLeft: '10em',
+      [theme.breakpoints.down('sm')]:{
+        margin: 0,
+        width:'8em'
+      }
       
   },
   logoAndSocial:{
@@ -63,18 +76,25 @@ const useStyles = makeStyles((theme) => ({
       }
   },
   gridLinksContainer:{
-      marginLeft: '5em'
+    width:'95%',
+    margin: '0 auto',
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      margin: 0
+    }
   }
 }));
 
 const Footer = () => {
   const classes = useStyles();
+  const theme = useTheme()
+  const mobileSM = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <div>
       <Grid container className={classes.mainGridContainer} >
         <Grid justify='space-between' className={classes.logoAndSocial} container>
 
-            <Grid item>
+            <Grid item className={classes.logoContainer}>
             <img className={classes.footerLogo} alt="Logo for insure insurance" src={Logo} />
             </Grid>
 
@@ -90,13 +110,13 @@ const Footer = () => {
             </Grid>
         </Grid>
 
-        <Grid container className={classes.divider} >
+        <Grid   container className={classes.divider} >
         
         </Grid>
 
-            <Grid className={classes.gridLinksContainer}  container>
+            <Grid direction={mobileSM ? 'column' :'row'} justify='center' className={classes.gridLinksContainer}  container>
 
-        <Grid  alignItems='center' justify='flex-start'  container>
+        <Grid  alignItems='center' justify='center' item  container>
           <Grid direction="column" container  className={classes.gridLinkContainer}>
             <Grid className={classes.LinkTitle} >Our Company</Grid>
             <Grid item className={classes.linkItems} >Why insure</Grid>
@@ -104,7 +124,7 @@ const Footer = () => {
             <Grid item className={classes.linkItems}> Review</Grid>
           </Grid>
 
-          <Grid container className={classes.gridLinkContainer}>
+          <Grid container item className={classes.gridLinkContainer}>
             <Grid className={classes.LinkTitle} item>Help Me</Grid>
             <Grid container direction="column">
               <Grid item className={classes.linkItems}>FAQ</Grid>
@@ -114,7 +134,7 @@ const Footer = () => {
             </Grid>
           </Grid>
 
-          <Grid container className={classes.gridLinkContainer}>
+          <Grid item container className={classes.gridLinkContainer}>
               <Grid className={classes.LinkTitle} item>
                   Contact
               </Grid>
@@ -125,7 +145,7 @@ const Footer = () => {
               </Grid>
           </Grid>
 
-          <Grid container className={classes.gridLinkContainer}>
+          <Grid item container className={classes.gridLinkContainer}>
               <Grid className={classes.LinkTitle} item>
                   Others
               </Grid>
