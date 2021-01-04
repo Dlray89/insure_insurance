@@ -123,9 +123,9 @@ const NavBar = () => {
     { id: 4, name: "Accounts", to: "/accounts" },
   ];
 
-  const valueHandler = (e, newValue) => {
-    setValue(newValue);
-  };
+  // const valueHandler = (e, newValue) => {
+  //   setValue(newValue);
+  // };
 
   useEffect(() => {
     switch (window.location.pathname) {

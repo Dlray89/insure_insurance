@@ -3,7 +3,6 @@ import { ThemeProvider } from '@material-ui/styles'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import theme from './Components/UI/theme'
 import Navbar from './Components/UI/Nav-folder/Nav'
-import Header from './Components/header-folder/header'
 import LandingPage from './Components/Body Content/LandingPage'
 import Footer from './Components/UI/Footer/footer'
 import './App.css';
